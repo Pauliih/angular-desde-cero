@@ -1,0 +1,10 @@
+<h1 class="container bg-dark text-white text-center my-4 py-4">ngIf show = {{show}}</h1>
+<div class="container">
+  <button class="btn btn-warning mb-3" (click)="show=!show">Acción</button>
+  <p class="text-success" *ngIf="show; else showDos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam amet voluptates eveniet mollitia consequatur nam
+    similique minima doloribus harum, id quo obcaecati hic voluptatibus officiis quibusdam sint rerum numquam.</p>
+    <ng-template #showDos>
+      <p class="text-danger">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ducimus iure necessitatibus nostrum eum natus aliquid,
+        voluptas quae, praesentium ut nihil perferendis exercitationem id provident temporibus voluptate neque facere voluptatem.</p>
+    </ng-template>
+</div>

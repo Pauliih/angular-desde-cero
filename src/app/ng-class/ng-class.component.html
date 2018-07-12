@@ -1,0 +1,18 @@
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngClass]</h1>
+<div class="container">
+
+  <p>Presiona Perro o Gato para ver la descripción.</p>
+
+  <button class="btn btn-dark mb-3 mr-2" (click)="activo='perro'">Perro</button>
+  <button class="btn btn-danger mb-3 mr-2" (click)="activo='gato'">Gato</button>
+  <div class="d-none" [ngClass]="{'d-block' : activo =='perro'}">
+    <h2>Perro</h2>
+    <p class="text-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam amet voluptates eveniet mollitia consequatur
+      nam similique minima doloribus harum, id quo obcaecati hic voluptatibus officiis quibusdam sint rerum numquam.</p>
+  </div>
+  <div class="d-none" [ngClass]="{'d-block' : activo =='gato'}">
+    <h2>Gato</h2>
+    <p class="text-danger">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ducimus iure necessitatibus nostrum eum natus aliquid,
+      voluptas quae, praesentium ut nihil perferendis exercitationem id provident temporibus voluptate neque facere voluptatem.</p>
+  </div>
+</div>
