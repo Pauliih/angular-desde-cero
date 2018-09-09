@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { NgIfClickComponent } from './ng-if-click/ng-if-click.component';
-import { NgClassComponent } from './ng-class/ng-class.component';
-import { NgForComponent } from './ng-for/ng-for.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { NgIfClickComponent } from './components/ng-if-click/ng-if-click.component';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { NgForComponent } from './components/ng-for/ng-for.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'nosotros', component: NosotrosComponent },
   // pagina de inicio
-  { path: '', component: InicioComponent, pathMatch:'full' },
+  { path: '', component: InicioComponent, pathMatch: 'full' },
   // redirigir a pagina de inicio
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
@@ -31,7 +31,7 @@ const routes: Routes = [
     NgForComponent,
     ContactoComponent,
     InicioComponent,
-    NosotrosComponent
+    NosotrosComponent,
   ],
   imports: [
     BrowserModule,
